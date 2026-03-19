@@ -1,0 +1,59 @@
+* {
+    outline: 1px dotted red;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    align-content: center;
+    justify-items: center;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    outline: 5px solid black;
+    background-color: #cd4242;
+    width: 65vw;
+    height: 65vw;
+    border-radius: 4vw;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50vw;
+    flex-grow: 1;
+    font-size: 3em;
+}
+
+.drawingField {
+    display: flex;
+    background-color: rgb(227, 216, 216);
+    outline: 5px solid black;
+    width: 50vw;
+    height: 50vw;
+}
+
+.functionalities {
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    padding: 20px 0px;
+    width: 50vw;
+    justify-content: space-around;
+}
+
+button {
+    outline: 3px solid black;
+
+    min-width: 10vw;
+    min-height: 5vw;
+    font-size: 2em;
+    border-radius: 4vw;
+}
+
