@@ -1,7 +1,6 @@
 let grid;
 let lastGridSize = 16;
 let randomColor = false;
-let colors = ["red", "green", "blue", "yellow", "purple", "pink", "orange"];
 
 const drawingField = document.querySelector(".drawingField") ;
 
@@ -77,13 +76,19 @@ function drawGrid(gridSize = lastGridSize) {
 function colorCell(event) {
     if(randomColor) {
         //color = random color from colors[]
-        event.target.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+        event.target.style.backgroundColor = getRandomColor();
     }
     else {
         //color = black
         event.target.style.backgroundColor = "black";
     }
-    
+}
+
+function getRandomColor() {
+    const redValue = Math.floor(Math.random() * 255);
+    const greenValue = Math.floor(Math.random() * 255);
+    const blueValue = Math.floor(Math.random() * 255);
+    return `rgb(${redValue}, ${greenValue}, ${blueValue})`;
 }
 
 drawGrid();
