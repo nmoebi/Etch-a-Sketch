@@ -75,11 +75,9 @@ function drawGrid(gridSize = lastGridSize) {
 
 function colorCell(event) {
     if(randomColor) {
-        //color = random color from colors[]
         event.target.style.backgroundColor = getRandomColor();
     }
     else {
-        //color = black
         event.target.style.backgroundColor = "black";
     }
 }
