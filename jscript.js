@@ -1,5 +1,7 @@
 let grid;
 let lastGridSize = 16;
+let randomColor = false;
+let colors = ["red", "green", "blue", "yellow", "purple", "pink", "orange"];
 
 const drawingField = document.querySelector(".drawingField") ;
 
@@ -23,6 +25,18 @@ const sizeBtn = document.querySelector("#sizeBtn");
     });
 
 const randomBtn = document.querySelector("#randomBtn");
+    randomBtn.addEventListener("mousedown", () => toggleRandom());
+
+function toggleRandom() {
+    if(!randomColor) {
+        randomBtn.textContent = "Random";
+        randomColor = true;
+    }
+    else {
+        randomBtn.textContent = "Black";
+        randomColor = false;
+    }
+}
 
 function setGridSize() {
     lastGridSize = +(prompt("Bitte Grid-Size (1-64) eingeben."));
@@ -61,7 +75,15 @@ function drawGrid(gridSize = lastGridSize) {
 }
 
 function colorCell(event) {
-    event.target.style.backgroundColor = "black";
+    if(randomColor) {
+        //color = random color from colors[]
+        event.target.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+    }
+    else {
+        //color = black
+        event.target.style.backgroundColor = "black";
+    }
+    
 }
 
 drawGrid();
