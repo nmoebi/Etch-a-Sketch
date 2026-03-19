@@ -1,6 +1,6 @@
-* {
+/* * {
     outline: 1px dotted red;
-}
+} */
 
 body {
     width: 100vw;
@@ -33,10 +33,12 @@ body {
 
 .drawingField {
     display: flex;
+    flex-wrap: wrap;
     background-color: rgb(227, 216, 216);
     outline: 5px solid black;
     width: 50vw;
     height: 50vw;
+    cursor: pointer;
 }
 
 .functionalities {
@@ -49,8 +51,8 @@ body {
 }
 
 button {
+    cursor: pointer;
     outline: 3px solid black;
-
     min-width: 10vw;
     min-height: 5vw;
     font-size: 2em;
