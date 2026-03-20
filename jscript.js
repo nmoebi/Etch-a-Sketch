@@ -4,16 +4,6 @@ let randomColor = false;
 
 const drawingField = document.querySelector(".drawingField") ;
 
-const buttons = document.querySelectorAll("button");
-    for (const btn of buttons) {
-        btn.addEventListener("mouseover", (e) => {
-            btn.style.backgroundColor = "yellow";
-        });
-        btn.addEventListener("mouseleave", (e) => {
-            btn.style.backgroundColor = "white";
-        });
-    }
-
 const deleteBtn = document.querySelector("#deleteBtn");
     deleteBtn.addEventListener("click", () => drawGrid());
 
@@ -23,7 +13,7 @@ const sizeBtn = document.querySelector("#sizeBtn");
         drawGrid();
     });
 
-const randomBtn = document.querySelector("#randomBtn");
+const randomBtn = document.querySelector("#randomBtn .front");
     randomBtn.addEventListener("mousedown", () => toggleRandom());
 
 function toggleRandom() {
