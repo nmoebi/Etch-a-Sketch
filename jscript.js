@@ -28,9 +28,9 @@ function toggleRandom() {
 }
 
 function setGridSize() {
-    lastGridSize = +(prompt("Bitte Grid-Size (1-64) eingeben."));
+    lastGridSize = +(prompt("Input Grid-Size (1-64)."));
     while(!(lastGridSize > 0 && lastGridSize <= 64))
-        lastGridSize = +(prompt("Bitte Grid-Size (1-64) eingeben."));
+        lastGridSize = +(prompt("Input Grid-Size (1-64)."));
 }
 
 function createCell() {
